@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apka pogodowa</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="iconWeatherUmbrella.png" />
+</head>
+
+<body>
+    <div class="content">
+        <header onclick="window.location.reload()">
+            <h1>Aplikacja pogodowa</h1>
+        </header>
+        <main>
+            <div class="app-top">
+                <div class="checkWeather">
+                    <input class="input1" type="text" placeholder="wpisz nazwę miasta" />
+                    <button id="show-weather">Sprawdź pogodę!</button>
+                    <p class="error"></p>
+                </div>
+                <div class="container-result">
+                    <p class="date"></p>
+                    <h2 class="cityName"></h2>
+                    <div class="temperatureBox">
+                        <div class="temperatureIcon">
+                            <img src="" alt="" />
+                            <p class="temperatureDescription"></p>
+                        </div>
+                        <span class="temperature"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="app-bottom">
+                <p class="p-app">Temperatura odczuwalna: <span class="feelsTemparature"></span></p>
+                <p class="p-app">Ciśnienie: <span class="pressure"></span></p>
+                <p class="p-app">Wilgotność: <span class="humidity"></span></p>
+                <p class="p-app">Prędkość wiatru: <span class="windSpeed"></span></p>
+            </div>
+        </main>
+        <footer>
+            <p class="p-footer">Kliknij obrazek powyżej aby zmienić motyw pory roku</p>
+        </footer>
+    </div>
+    <div class="seasonWindow">
+        <div class="seasonChange" onclick="background1()"><img src="images/spring.jpg"></div>
+        <div class="seasonChange" onclick="background2()"><img src="images/summer.jpg"></div>
+        <div class="seasonChange" onclick="background3()"><img src="images/autumn.jpg"></div>
+        <div class="seasonChange" onclick="background4()"><img src="images/winter.jpg"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

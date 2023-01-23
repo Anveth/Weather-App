@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-image: url("images/winter.jpg");
+  background-position: center;
+  background-position: 0px;
+  background-size: cover;
+}
+
+.seasonWindow {
+  width: 21rem;
+  height: 5rem;
+  background: rgba(216, 242, 255, 0.7803921569);
+  box-shadow: 18px 17px 39px -6px #57c7ff;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 13%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.seasonWindow .seasonChange {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.seasonWindow .seasonChange img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 80%;
+}
+.seasonWindow .seasonChange img:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  height: 100px;
+}
+.content header {
+  margin-top: -50px;
+  box-shadow: 18px 17px 39px -6px #115d84;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #8fceef;
+  width: 30%;
+  text-align: center;
+}
+.content header:hover {
+  cursor: pointer;
+}
+.content header h1 {
+  color: #242424;
+}
+.content p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content main {
+  font-size: 20px;
+}
+.content main .app-top .checkWeather .error {
+  background-color: rgba(216, 242, 255, 0.8823529412);
+}
+.content main .app-top .checkWeather .input1 {
+  width: 320px;
+  font-size: 24px;
+  border-color: rgba(255, 255, 255, 0.8823529412);
+  text-align: center;
+}
+.content main .app-top .checkWeather #show-weather {
+  cursor: pointer;
+  width: 220px;
+  background-color: #708ce7;
+  border-color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  color: #242424;
+}
+.content main .app-top .container-result {
+  display: flex;
+  background-color: rgba(216, 242, 255, 0.8823529412);
+  width: 544px;
+  text-align: center;
+}
+.content main .app-top .container-result .cityName {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+}
+.content main .app-top .container-result .date {
+  display: flex;
+  align-items: center;
+}
+.content main .app-top .container-result .temperatureBox {
+  display: flex;
+  width: 600px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content main .app-top .container-result .temperatureBox .temperature {
+  font-weight: bold;
+}
+.content main .app-bottom {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(216, 242, 255, 0.8823529412);
+}
+.content main .app-bottom .p-app {
+  padding: 5px;
+  box-shadow: 8px 26px 28px -15px rgb(144, 144, 150);
+}
+.content footer {
+  margin-bottom: -50px;
+  box-shadow: 18px 17px 39px -6px #57c7ff;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #d8f2ff;
+  width: 30%;
+  text-align: center;
+  color: #242424;
+  font-weight: bold;
+}
+.content footer .p-footer {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1400px) {
+  .content header {
+    width: 410px;
+  }
+  .content footer {
+    width: 410px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-position: center;
+  }
+  .content header {
+    width: 300px;
+  }
+  .content header h1 {
+    font-size: 20px;
+  }
+  .content main .app-top .checkWeather #show-weather {
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .content main .app-top .checkWeather .input1 {
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .content main .app-top .container-result {
+    padding-top: 5px;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content main .app-top .container-result .cityName {
+    font-size: 22px;
+  }
+  .content main .app-top .container-result .date {
+    font-size: 18px;
+  }
+  .content main .app-top .container-result .temperatureBox {
+    width: 300px;
+    flex-direction: column;
+  }
+  .content main .app-top .container-result .temperatureBox .temperatureDescription {
+    font-size: 18px;
+  }
+  .content main .app-top .container-result .temperatureBox .temperature {
+    font-size: 18px;
+  }
+  .content main .app-bottom {
+    width: 303px;
+  }
+  .content footer {
+    width: 300px;
+    padding: 10px;
+  }
+  .content footer .p-footer {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=index.css.map */

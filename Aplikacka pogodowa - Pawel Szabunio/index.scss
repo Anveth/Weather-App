@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background-image: url("images/winter.jpg");
+    background-position: center;
+    background-position: 0px;
+    background-size: cover;
+
+}
+
+.seasonWindow {
+    width: 21rem;
+    height: 5rem;
+    background: #d8f2ffc7;
+    box-shadow: 18px 17px 39px -6px #57c7ff;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 13%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.seasonWindow .seasonChange {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.seasonWindow .seasonChange img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 80%;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 100%;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    height: 100px;
+
+    header {
+        margin-top: -50px;
+        box-shadow: 18px 17px 39px -6px #115d84;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #8fceef;
+        width: 30%;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        h1 {
+            color: #242424;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    main {
+        font-size: 20px;
+
+        .app-top {
+            .checkWeather {
+                .error {
+                    background-color: #d8f2ffe1;
+                }
+
+                .input1 {
+                    width: 320px;
+                    font-size: 24px;
+                    border-color: #ffffffe1;
+                    text-align: center;
+                }
+
+                #show-weather {
+                    cursor: pointer;
+                    width: 220px;
+                    background-color: #708ce7;
+                    border-color: #000000;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #242424;
+                }
+            }
+
+            .container-result {
+                display: flex;
+                background-color: #d8f2ffe1;
+                width: 544px;
+                text-align: center;
+
+                .cityName {
+                    font-size: 26px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .date {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .temperatureBox {
+                    display: flex;
+                    width: 600px;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    .temperature {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+        }
+
+        .app-bottom {
+            display: flex;
+            flex-direction: column;
+            background-color: #d8f2ffe1;
+
+            .p-app {
+                padding: 5px;
+                box-shadow: 8px 26px 28px -15px rgba(144, 144, 150, 1);
+            }
+        }
+    }
+
+    footer {
+        margin-bottom: -50px;
+        box-shadow: 18px 17px 39px -6px #57c7ff;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #d8f2ff;
+        width: 30%;
+        text-align: center;
+        color: #242424;
+        font-weight: bold;
+
+        .p-footer {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .content {
+        header {
+            width: 410px;
+        }
+
+        footer {
+            width: 410px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-position: center
+    }
+
+    .content {
+        header {
+            width: 300px;
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        main {
+            .app-top {
+                .checkWeather {
+                    #show-weather {
+                        width: 140px;
+                        height: 40px;
+                        font-size: 18px;
+                    }
+
+                    .input1 {
+                        width: 160px;
+                        height: 40px;
+                        font-size: 18px;
+                    }
+
+                }
+
+                .container-result {
+                    padding-top: 5px;
+                    width: 300px;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .cityName {
+                        font-size: 22px;
+                    }
+
+                    .date {
+                        font-size: 18px;
+                    }
+
+                    .temperatureBox {
+                        width: 300px;
+                        flex-direction: column;
+
+                        .temperatureDescription {
+                            font-size: 18px;
+                        }
+
+                        .temperature {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .app-bottom {
+                width: 303px;
+            }
+        }
+
+        footer {
+            width: 300px;
+            padding: 10px;
+
+            .p-footer {
+                font-size: 16px;
+            }
+        }
+    }
+}
